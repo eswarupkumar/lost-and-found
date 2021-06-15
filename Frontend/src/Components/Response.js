@@ -14,7 +14,7 @@ function Response() {
   const handleShowNumber = (response) => {
     console.log("Inside :", response);
     Axios({
-      url: `/getnumber/${response.belongsTo}`,
+      url: `http://localhost:5000/getnumber/${response.belongsTo}`,
       method: "GET",
     })
       .then((response) => {
@@ -31,7 +31,7 @@ function Response() {
   const temp = [];
   useEffect(() => {
     Axios({
-      url: `/myresponses/${JSON.parse(localStorage.getItem("user"))._id}`,
+      url: `http://localhost:5000/myresponses/${JSON.parse(localStorage.getItem("user"))._id}`,
       method: "GET",
     })
       .then((res) => {

@@ -35,7 +35,7 @@ export default function Home() {
     };
     Axios({
       method: "POST",
-      url: "/sendmessage",
+      url: "http://localhost:5000/sendmessage",
       data: data,
     })
       .then((res) => {
@@ -78,7 +78,7 @@ export default function Home() {
         <h6>My Project Inspiration</h6>
         <p>Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.</p>
       </div> */}
-      <Container fluid className="total-inspiration">
+      {/* <Container fluid className="total-inspiration">
         <div>
           <img
             src={developer}
@@ -99,7 +99,7 @@ export default function Home() {
             Get Started
           </Button>
         </Row>
-      </Container>
+      </Container> */}
       <Container fluid>
         <div className="total-about">
           <div className="about-heading">
@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </div>
       </Container>
-      <Container fluid>
+      {/* <Container fluid>
         <div className="total-contact-form">
           <div className="contact-title">
             <h6 className="section-heading"> Contact Form</h6>
@@ -196,8 +196,8 @@ export default function Home() {
             </Form>
           </div>
         </div>
-      </Container>
-      <Container fluid>
+      </Container> */}
+      {/* <Container fluid>
         <div className="footer">
           <div className="social-icon">
             <a href="https://github.com/eswarupkumar" target="_blank"><img src={github} className="icon github" alt="" /></a> 
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
           <h4>Copyright © 2021 E Swarup Kumar. All rights reserved.</h4>
         </div>
-      </Container>
+      </Container> */}
       {/* <div className="About">
         <div>
           <h1>About the project</h1>

@@ -43,7 +43,7 @@ export default class Signup extends Component {
     };
     // console.log(payload.username)
     axios({
-      url: "/signup",
+      url: "http://localhost:5000/signup",
       method: "POST",
       data: payload,
       withCredentials: true,

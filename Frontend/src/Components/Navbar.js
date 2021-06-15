@@ -11,28 +11,28 @@ function Navbar() {
   const token = window.localStorage.getItem("token");
   // console.log(props)
   // console.log("Status :", LOGGED_IN)
-  useEffect(()=>{
-    axios({
-      url:'checktoken',
-      method:"POST",
-      headers:{
-        Authorization: token ? `Bearer ${token}` : "",
-      },
-    })
-    .then((res)=>{
-      console.log(res)
-    })
-    .catch((err)=>{
-      console.log("400 : ",err)
-    })
-  },[])
+  // useEffect(()=>{
+  //   axios({
+  //     url:'http://localhost:5000/checktoken',
+  //     method:"POST",
+  //     headers:{
+  //       Authorization: token ? `Bearer ${token}` : "",
+  //     },
+  //   })
+  //   .then((res)=>{
+  //     console.log(res)
+  //   })
+  //   .catch((err)=>{
+  //     console.log("400 : ",err)
+  //   })
+  // },[])
   const signout = () => {
     // constraint.LOGGED_IN = false;
     setConstraint(false);
 
     console.log("Signed out !");
     axios({
-      url: "/signout",
+      url: "http://localhost:5000/signout",
       method: "POST",
       headers: {
         Authorization: token ? `Bearer ${token}` : "",
@@ -85,12 +85,12 @@ function Navbar() {
               Feed
             </a>
             {/* {props.name} */}
-            <a
+            {/* <a
               style={{ textDecoration: "none", color: "white" }}
               href="/responses"
             >
               Responses
-            </a>
+            </a> */}
             <a
               style={{ textDecoration: "none", color: "white" }}
               href="/mylistings"

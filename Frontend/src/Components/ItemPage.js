@@ -88,7 +88,7 @@ function ItemPage(props) {
   useEffect(() => {
     const { location } = props;
     Axios({
-      url: `/item/${location.search.substring(1).split("=")[1].split("&")[0]}`,
+      url: `http://localhost:5000/item/${location.search.substring(1).split("=")[1].split("&")[0]}`,
       method: "GET",
     })
       .then((response) => {
@@ -280,7 +280,7 @@ function ItemPage(props) {
             )}
           </div>
         );
-        setauthenication(validation);
+        // setauthenication(validation);
       })
       .catch((err) => {
         console.log("Error :", err);
@@ -289,7 +289,7 @@ function ItemPage(props) {
   const submitResponse = () => {
     // console.log(e.target.value)
     Axios({
-      url: `confirmResponse/${messageId}`,
+      url: `http://localhost:5000/confirmResponse/${messageId}`,
       method: "POST",
       data: { response: response },
     })
@@ -310,7 +310,7 @@ function ItemPage(props) {
   const delete_item = () => {
     console.log("deleted");
     Axios({
-      url: "/deleteitem",
+      url: "http://localhost:5000/deleteitem",
       method: "POST",
       data: { item_id },
     })
@@ -350,7 +350,7 @@ function ItemPage(props) {
       })
     }
     Axios({
-      url: "/edititem",
+      url: "http://localhost:5000/edititem",
       method: "POST",
       data:info
     })
@@ -392,7 +392,7 @@ function ItemPage(props) {
   };
   const submitAnswer = () => {
     Axios({
-      url: "/submitAnswer",
+      url: "http://localhost:5000/submitAnswer",
       method: "POST",
       data: {
         itemId: item_id,
